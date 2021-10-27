@@ -12,7 +12,7 @@ public class simpleNcompoundInterest
 		System.out. println("Enter the Rate of interest");
 		rate=obj.nextDouble();
 		sim=(p * t * rate)/100;
-		com=p * Math.pow(1.0+rate/100.0,t) - p;
+		com=p * (Math.pow(1.0+(rate/100.0),t)) - p;
 		System.out.println("Simple Interest="+sim );
 		System.out. println("Compound Interest="+com);
 	}
