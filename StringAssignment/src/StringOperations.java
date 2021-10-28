@@ -23,6 +23,17 @@ public class StringOperations {
 		else
 			System.out.println("NOT");
 		
+		//StringBuffer
+		StringBuffer str3 = new StringBuffer("This is an example STRING_BUFFER for operations");
+		StringBuffer str4 = new StringBuffer(" This Needs to be Appended");
+		str3.append(str4);						//Appended str4 to str3
+		System.out.println(str3);
+		
+		str3.insert(11," Inserted_Here ");			//Inserted text to str3
+		System.out.println(str3);
+		
+		str3.reverse();				//Reversed StringBuffer str3
+		System.out.println(str3);
 	}
 
 }
