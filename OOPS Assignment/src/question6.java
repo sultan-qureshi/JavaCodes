@@ -4,14 +4,14 @@ abstract class Persistence{
 }
 class FilePersistence extends Persistence{
 	public void persist() {
-		System.out.print(" Persist is in FilePersistence ");
+		System.out.print(" Persist is in FilePersistence...... ");
 		
 	}
 	
 }
 class DatabasePersistence extends Persistence{
 	public void persist() {
-		System.out.print(" Persist is in DatabasePersistence ");
+		System.out.println(" Persist is in DatabasePersistence ");
 		
 	}
 	
