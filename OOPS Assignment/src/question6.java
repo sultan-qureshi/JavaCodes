@@ -23,5 +23,4 @@ public class question6 {
 		DatabasePersistence D=new DatabasePersistence();
 		D.persist();
 	}
-
 }
