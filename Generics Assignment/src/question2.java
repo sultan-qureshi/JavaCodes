@@ -10,6 +10,7 @@ public class question2 {
 		map.put(40, 45.75);
 		map.put(50, 36.84);
 		System.out.print(map);
+		
 
 	}
 
