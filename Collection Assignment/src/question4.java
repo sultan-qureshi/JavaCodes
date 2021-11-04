@@ -1,30 +1,34 @@
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.time.*;
+class datt {
+	LocalDate datee;
+
+	public datt(LocalDate datee) {
+		this.datee = datee;
+	}
+
+	public LocalDate getDatee() {
+		return datee;
+	}
+	
+	
+}
 public class question4 {
 
 	public static void main(String[] args) {
-		
-		
 
-		LocalDate dat1 =  LocalDate.of(1999, 12, 17); 
-		LocalDate dat2 = LocalDate.of(2000, 12, 23); 
-		LocalDate dat3 = LocalDate.of(1998, 01, 01); 
-		LocalDate dat4 = LocalDate.of(2003, 10, 19); 
-
-		LinkedList db = new LinkedList();
-		db.add(dat1);
-		db.add(dat2);
-		db.add(dat3);
-		db.add(dat4);
+		LinkedList<datt> db = new LinkedList<>();
+		db.add(new datt(LocalDate.of(1999, 12, 17)));
+		db.add(new datt(LocalDate.of(2000, 12, 23)));
+		db.add(new datt(LocalDate.of(1998, 01, 01)));
+		db.add(new datt(LocalDate.of(2003, 10, 19)));
 		
-	
-		 Iterator itr=db.iterator();  
-		  while(itr.hasNext()){  
-		
-			  System.out.println("Your DOB is: "+itr.next()+" and it a leap Year");  
-		  }  
-		
+		for(datt e:db) {
+			if(e.getDatee().isLeapYear()==true)
+				System.out.println("Your DOB is "+e.getDatee()+" and was a leap Year");
+			else if(e.getDatee().isLeapYear()==false)
+				System.out.println("Your DOB is "+e.getDatee()+" and was NOT a leap Year");
+		}
 
 	}
 }
