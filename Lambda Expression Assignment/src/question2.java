@@ -36,13 +36,13 @@ public class question2 {
 		ord.add(new order(105,11000,OStatus.intrans));
 		
 		
-		for(order od:ord) {
-			if(od.getOprice()>10000  && (od.getOStatus().equals(OStatus.Accepted)
-					|| od.getOStatus().equals(OStatus.Completed))) {
-				System.out.println("order ID: "+od.getOid());
-				
-			}
-		}
+		
+		
+		ord.stream()
+		.forEach(o -> {
+			if(o.getOprice()>10000  && (o.getOStatus().equals(OStatus.Accepted)
+					|| o.getOStatus().equals(OStatus.Completed))) {
+				System.out.println("order ID: "+o.getOid()); }
+		});
 	}
-
 }
